@@ -8,11 +8,14 @@ Features
 	•	Formats the extracted comments with instructions for summarization.
 	•	Saves the comments to a .txt file in your system’s Downloads folder.
 	•	Copies the formatted comments directly to your clipboard for convenience.
+ Instruction for Mac
 
  Prerequisites
-	1.	Python 3.7 or later: Make sure Python is installed on your system. You can download it here.
-	2.	Pip: Ensure pip (Python package manager) is installed. It is usually included with Python installations.
+	1.	Python 3.7 or later: Make sure Python is installed on your system. 
+	2.	Pip: Ensure pip is installed.
 
+Create a folder and place the py file inside.
+CD into that folder
 pip install requests pyperclip
 python red.py
 
