@@ -21,6 +21,6 @@ pip install requests pyperclip
 python red.py
 
 Running this script it will ask you for the URL of the reddit post.
-The script will extract all comments including nested, attach a promtp to the comments and cpy them to clipboard.
+The script will extract all comments including nested, attach a promtp to the comments and copy them to clipboard.
 Then you can just simply paste in your LLM of choice and it will provide a detailed summary of the comments.
 It also created a txt document with those comments in case of need.
