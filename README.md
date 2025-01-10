@@ -17,6 +17,7 @@ Features
 Create a folder and place the py file inside.
 CD into that folder
 pip install requests pyperclip
+
 python red.py
 
 Running this script it will ask you for the URL of the reddit post.
