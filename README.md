@@ -1,26 +1,58 @@
-Reddit Comment Extractor
+Reddit Comments Extractor
 
-Reddit Comment Extractor is a Python script designed to fetch all comments (including nested ones) from a Reddit post and save them as a formatted text file. 
-Additionally, it copies the comments to your clipboard for easy use. 
+# Reddit Comments Extractor
 
-Features
-	•	Extracts all comments, including replies (nested comments), from a Reddit post.
-	•	Formats the extracted comments with instructions for summarization.
-	•	Saves the comments to a .txt file in your system’s Downloads folder.
-	•	Copies the formatted comments directly to your clipboard for convenience.
- Instruction for Mac
+## Overview
+This Python script extracts comments from a Reddit post, including nested replies and additional comments from 'more' objects, using Reddit's API. The extracted comments are formatted and saved to a text file in the Downloads directory, copied to the clipboard, and a desktop notification is displayed with the total count of extracted comments.
 
- Prerequisites
-	1.	Python 3.7 or later: Make sure Python is installed on your system. 
-	2.	Pip: Ensure pip is installed.
+## Features
+- Extracts all comments, including nested replies and 'more' comments.
+- Formats the comments with instructions for summarization.
+- Saves the extracted comments to a text file in the `Downloads` directory.
+- Copies the formatted comments to the clipboard.
+- Sends a macOS desktop notification with the total number of extracted comments.
 
-Create a folder and place the py file inside.
-CD into that folder
-pip install requests pyperclip
+## Installation
+### Prerequisites
+Ensure you have Python installed, and install the required dependencies:
 
-python red.py
+```sh
+pip install requests pyperclip pync
+```
 
-Running this script it will ask you for the URL of the reddit post.
-The script will extract all comments including nested, attach a promtp to the comments and copy them to clipboard.
-Then you can just simply paste in your LLM of choice and it will provide a detailed summary of the comments.
-It also created a txt document with those comments in case of need.
+## Usage
+1. Run the script:
+
+```sh
+python reddit_comments_extractor.py
+```
+
+2. Enter the Reddit post URL when prompted.
+3. The script will extract and process the comments.
+4. The formatted comments will be:
+   - Saved as `comments.txt` in the `~/Downloads/` directory.
+   - Copied to the clipboard.
+   - A notification will be displayed showing the number of extracted comments.
+5. Type `exit` to quit the script.
+
+## Example Output
+When providing a Reddit URL, the script extracts the comments and saves them in the following format:
+
+```
+You are the best content writer in the world! These are a reddit post comments.
+Summarise the key themes and main points. Identify the top points or themes discussed in the comments, with examples for each. Include a brief overview of any major differing viewpoints if present. Think step by step.
+
+<text>
+[Extracted Comments Here]
+</text>
+```
+
+## Known Issues & Limitations
+- The script does not authenticate with Reddit, so it might be subject to rate limits.
+
+## License
+This project is licensed under the MIT License.
+
+## Contributions
+Pull requests and improvements are welcome! Feel free to fork the repository and submit changes.
+
